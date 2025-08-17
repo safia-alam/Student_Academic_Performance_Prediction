@@ -1,3 +1,4 @@
+HEAD
 # Student Academic Performance Prediction
 
 End-to-end ML project to predict student academic performance (exam scores) using demographic and academic factors.
@@ -69,3 +70,5 @@ Expected columns include (typical Kaggle version):
 
 ## 📄 License
 MIT
+# Student_Academic_Performance_Prediction
+Predicting student performance using Machine Learning and Streamlit.4ce5c1f67e8f5276da83f908af9c1d91a81773bb
