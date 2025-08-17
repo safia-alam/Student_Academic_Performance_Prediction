@@ -1,74 +1,136 @@
-HEAD
-# Student Academic Performance Prediction
 
-End-to-end ML project to predict student academic performance (exam scores) using demographic and academic factors.
-Includes EDA, feature engineering, model comparison, hyperparameter tuning, and a Streamlit app for live predictions.
 
-## ✨ Highlights
-- Clean EDA with visualizations (Matplotlib)
-- Feature engineering (e.g., `average_score`, pass/fail label)
-- Models compared: Linear Regression, Random Forest, Gradient Boosting
-- Hyperparameter tuning with `RandomizedSearchCV`
-- Persisted pipeline (`models/best_model.pkl`)
-- **Streamlit app** for interactive predictions (`app/app.py`)
+# 🎓 Student Academic Performance Prediction
 
-## 🗂️ Repository Structure
+This project predicts **student academic performance (average exam score)** based on demographic and academic attributes such as gender, parental education, lunch type, and test preparation course.
+
+It includes:
+
+* 📊 **Data Analysis** of student performance dataset
+* 🧠 **Machine Learning model** (scikit-learn pipeline) for prediction
+* 🌐 **Interactive Web App** built with Streamlit
+
+---
+
+## 🚀 Features
+
+✅ Predicts student’s average score out of 100
+✅ Clean ML pipeline with preprocessing + model
+✅ Streamlit app for user-friendly interaction
+✅ Ready to deploy and showcase on resume/GitHub
+
+---
+
+## 📂 Project Structure
+
 ```
 Student_Academic_Performance_Prediction/
+│
 ├── app/
-│   └── app.py                # Streamlit web app
-├── data/
-│   ├── .gitkeep              # Place dataset here as StudentsPerformance.csv
+│   └── app.py                # Streamlit web application
+│
 ├── models/
-│   └── .gitkeep              # Trained model artifacts will be saved here
+│   └── best_model.pkl        # Trained ML model
+│
+├── data/
+│   └── StudentsPerformance.csv   # Dataset
+│
 ├── notebooks/
-│   └── Student_Performance_Analysis.ipynb   # Full end-to-end notebook
-├── LICENSE
-├── README.md
-└── requirements.txt
+│   └── Student_Performance_Analysis.ipynb  # Jupyter analysis
+│
+├── requirements.txt          # Project dependencies
+├── train_model.ipynb         # Model training notebook
+├── README.md                 # Project documentation
+└── LICENSE
 ```
 
-## 📦 Dataset
-Use the **StudentsPerformance** dataset (commonly available on Kaggle).  
-Place the CSV at:
+---
+
+## ⚙️ Tech Stack
+
+* **Python 3.12+**
+* **Pandas, NumPy** – Data handling
+* **scikit-learn** – Machine Learning
+* **Joblib** – Model saving/loading
+* **Streamlit** – Web application
+
+---
+
+## 📊 Dataset
+
+The dataset `StudentsPerformance.csv` contains student details and scores in three subjects:
+
+* Math
+* Reading
+* Writing
+
+Target variable: **Average Score** (mean of three subject scores).
+
+---
+
+## ▶️ How to Run
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/safia-alam/Student_Academic_Performance_Prediction.git
+cd Student_Academic_Performance_Prediction
 ```
-data/StudentsPerformance.csv
+
+### 2️⃣ Create & activate environment (recommended)
+
+```bash
+conda create -n student_pred python=3.12 -y
+conda activate student_pred
 ```
-Expected columns include (typical Kaggle version):
-- `gender`, `race/ethnicity`, `parental level of education`, `lunch`, `test preparation course`,
-- `math score` (or `math_score` / `math_score` variants), `reading score`, `writing score`.
 
-> ⚠️ Column names vary across sources. The notebook includes a flexible loader that tries common variants and raises a clear message if not found. Update the mapping in the notebook if your column names differ.
+### 3️⃣ Install dependencies
 
-## ▶️ Quickstart (Local)
-1. Create and activate a virtual environment
-   ```bash
-   python -m venv .venv
-   source .venv/bin/activate   # Windows: .venv\Scripts\activate
-   ```
-2. Install dependencies
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Add the dataset at `data/StudentsPerformance.csv`.
-4. Run the notebook (recommended first run)
-   ```bash
-   jupyter notebook notebooks/Student_Performance_Analysis.ipynb
-   ```
-5. Train and save the model (the notebook saves to `models/`).
-6. Launch the app
-   ```bash
-   streamlit run app/app.py
-   ```
+```bash
+pip install -r requirements.txt
+```
 
-## 🧠 Resume Bullet (Sample)
-- Implemented and enhanced a machine learning model to predict student performance using demographic and academic factors; engineered features like `average_score` and tuned Random Forest & Gradient Boosting models to achieve strong **R²** performance. Built an interactive **Streamlit** app for real‑time predictions.
+### 4️⃣ Run Streamlit app
 
-## 📝 Notes
-- This project is **inspired by open-source work** and significantly extended with feature engineering, model comparison, tuning, and deployment. Always be transparent in your resume: explain your unique contributions.
-- For reproducibility, set the random seed and note versions in `requirements.txt`.
+```bash
+streamlit run app/app.py
+```
 
-## 📄 License
-MIT
-# Student_Academic_Performance_Prediction
-Predicting student performance using Machine Learning and Streamlit.4ce5c1f67e8f5276da83f908af9c1d91a81773bb
+---
+
+## 📸 Screenshots
+
+🔹 **Input Form Example**
+![App Screenshot](https://1drv.ms/i/c/46ea1d2de37f5e6f/Ef1pobELAMpGl2TmOJH0_e8Bj-RpHA1IAnw7N5K7kFpbTA?e=Ia9uZe)
+
+---
+
+## 🌟 Why This Project is Different?
+
+Unlike basic ML projects that stop at a Jupyter Notebook, this project goes further by:
+
+* ✅ Providing an **end-to-end solution** (data → model → web app)
+* ✅ Packaging the ML model (`best_model.pkl`) for reuse
+* ✅ Offering a professional **Streamlit UI** for real-time predictions
+* ✅ Being **resume-ready** and deployment-ready
+
+---
+
+## 📌 Future Enhancements
+
+* 🔮 Deploy on **Streamlit Cloud / Heroku**
+* 📱 Add **visualizations** for better insights
+* 🧑‍🎓 Include more features (attendance, study hours, etc.)
+
+---
+
+## 📝 Author
+
+👩‍💻 **Safia Alam H B**
+
+* 📧 Email: [shaiksafia24@outlook.com](mailto:shaiksafia24@outlook.com)
+* 🌐 GitHub: [safia-alam](https://github.com/safia-alam)
+
+---
+
+
